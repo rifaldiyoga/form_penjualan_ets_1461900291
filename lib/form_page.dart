@@ -126,23 +126,6 @@ class _FormPageState extends State<FormPage> {
       return false;
     }
 
-    Widget checkbox() {
-      return Column(
-        children: [
-          for (var i = 0; i < jenisBarangList.length; i++)
-            LabeledCheckbox(
-                label: jenisBarangList[i],
-                padding: EdgeInsets.all(0),
-                value: isHobySelected(jenisBarangList[i]),
-                onChanged: () {
-                  setState(() {
-                    jenisBrgValList.add(jenisBarangList[i]);
-                  });
-                }),
-        ],
-      );
-    }
-
     Widget foto() {
       return Container(
         constraints: BoxConstraints(
